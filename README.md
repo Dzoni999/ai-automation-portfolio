@@ -1,59 +1,116 @@
-# AiPortfolio
+# 🤖 AI Automation Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.32.
+A modern, responsive portfolio website showcasing AI automation services, solutions, and case studies.
 
-## Development server
+Built with **Angular 20**, **TypeScript**, and **Tailwind CSS**, featuring smooth animations, bilingual support, dark/light mode, and a clean, premium user experience.
 
-To start a local development server, run:
+---
+
+## 🚀 Features
+
+- ✨ Modern and responsive UI
+- 🌙 Dark & Light mode
+- 🌍 English & Serbian localization
+- ⚡ Smooth animations and transitions
+- 📱 Fully responsive design
+- 🤖 AI Automation focused content
+- 📂 Case Studies section
+- 📞 Contact form
+- 🎨 Clean and premium design
+- 🔍 SEO friendly
+
+---
+
+## 🛠️ Tech Stack
+
+- Angular 20
+- TypeScript
+- Tailwind CSS
+- HTML5
+- CSS3
+
+---
+
+## 📦 Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Dzoni999/ai-automation-portfolio.git
+```
+
+Navigate to the project:
+
+```bash
+cd ai-automation-portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## 🏗️ Production Build
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The production build will be generated inside the `dist/` folder.
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 📁 Project Structure
 
-```bash
-ng test
+```
+src/
+ ├── app/
+ ├── assets/
+ ├── environments/
+ ├── styles/
+ └── shared/
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 🌐 Live Demo
 
-```bash
-ng e2e
-```
+Coming soon...
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## 📸 Preview
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+*Screenshots coming soon.*
+
+---
+
+## 👨‍💻 Author
+
+**Nikola Sajic**
+
+AI Automation Developer • Backend Developer (.NET)
+
+GitHub:
+https://github.com/Dzoni999
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub.
