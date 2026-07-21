@@ -1,0 +1,11 @@
+<a
+  [href]="href()"
+  [target]="target()"
+  [attr.rel]="target() === '_blank' ? 'noopener noreferrer' : null"
+  class="micro-lift group inline-flex min-h-11 max-w-full items-center justify-center rounded-md border px-5 py-3 text-center text-sm font-semibold shadow-sm transition duration-300 focus-visible:outline-none"
+  [ngClass]="variantClasses()"
+>
+  <span class="whitespace-normal transition-transform duration-300 group-hover:translate-x-0.5">
+    <ng-content />
+  </span>
+</a>

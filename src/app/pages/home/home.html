@@ -1,0 +1,139 @@
+<main id="top" class="page-shell overflow-hidden" tabindex="-1">
+  <section class="relative">
+    <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-24 pt-16 sm:px-6 sm:pt-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:pb-32 lg:pt-24">
+      <div class="max-w-3xl" appReveal>
+        <p class="inline-flex rounded-md border border-blue-500/20 bg-blue-600/10 px-3 py-1 text-sm font-semibold text-blue-700 dark:text-blue-300">
+          {{ copy().home.hero.eyebrow }}
+        </p>
+        <h1 class="mt-7 text-4xl font-semibold leading-[1.05] text-slate-950 sm:text-5xl lg:text-6xl dark:text-white">
+          {{ copy().home.hero.title }}
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-zinc-400">
+          {{ copy().home.hero.subtitle }}
+        </p>
+        <div class="mt-8 flex flex-col gap-3 md:flex-row">
+          <app-cta-button href="mailto:nikolasajic7@gmail.com?subject=AI%20automation%20idea">
+            {{ copy().home.hero.primaryCta }}
+          </app-cta-button>
+          <app-cta-button href="#services" variant="secondary">
+            {{ copy().home.hero.secondaryCta }}
+          </app-cta-button>
+        </div>
+        <div class="mt-8 grid gap-3 border-l border-slate-900/10 pl-4 dark:border-white/10">
+          <p class="max-w-xl text-sm leading-6 text-slate-500 dark:text-zinc-500">
+            {{ copy().home.hero.note }}
+          </p>
+          <div class="flex flex-wrap gap-2 text-xs font-semibold text-slate-600 dark:text-zinc-400">
+            <span class="rounded-md border border-slate-900/10 bg-white px-2.5 py-1 dark:border-white/10 dark:bg-white/5">AI</span>
+            <span class="rounded-md border border-slate-900/10 bg-white px-2.5 py-1 dark:border-white/10 dark:bg-white/5">n8n</span>
+            <span class="rounded-md border border-slate-900/10 bg-white px-2.5 py-1 dark:border-white/10 dark:bg-white/5">APIs</span>
+            <span class="rounded-md border border-slate-900/10 bg-white px-2.5 py-1 dark:border-white/10 dark:bg-white/5">Backend</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pb-10 lg:pb-0" appReveal [appRevealDelay]="140">
+        <app-hero-automation-visual [visual]="copy().home.visual" />
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="soft-divider border-y border-slate-900/10 bg-white/55 py-20 dark:border-white/10 dark:bg-white/[0.025]">
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <app-section-header
+        appReveal
+        [eyebrow]="copy().home.services.eyebrow"
+        [title]="copy().home.services.title"
+        [subtitle]="copy().home.services.subtitle"
+      />
+
+      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        @for (service of copy().home.services.items; track service.title) {
+          <app-service-card appReveal [appRevealDelay]="$index * 55" [service]="service" />
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="soft-divider py-20">
+    <div class="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
+      <app-section-header
+        appReveal
+        [eyebrow]="copy().home.features.eyebrow"
+        [title]="copy().home.features.title"
+        [subtitle]="copy().home.features.subtitle"
+      />
+
+      <div class="grid gap-4 md:grid-cols-3 lg:grid-cols-1">
+        @for (feature of copy().home.features.items; track feature.title) {
+          <article appReveal [appRevealDelay]="$index * 70" class="micro-lift rounded-lg border border-slate-900/10 bg-white p-5 shadow-sm shadow-slate-200/50 transition duration-300 hover:border-blue-500/35 hover:shadow-xl hover:shadow-slate-200/70 dark:border-white/10 dark:bg-white/5 dark:shadow-black/10 dark:hover:border-blue-400/40 dark:hover:shadow-blue-950/20">
+            <p class="text-sm font-semibold text-slate-950 dark:text-white">{{ feature.title }}</p>
+            <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-zinc-400">{{ feature.text }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="soft-divider bg-slate-950 py-20 text-white dark:bg-black/20">
+    <div class="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 lg:grid-cols-[1fr_1fr] lg:px-8">
+      <div appReveal>
+        <p class="text-sm font-semibold text-blue-300">{{ copy().home.trust.eyebrow }}</p>
+        <h2 class="mt-3 text-3xl font-semibold leading-tight sm:text-4xl">{{ copy().home.trust.title }}</h2>
+        <p class="mt-4 text-base leading-7 text-zinc-300">{{ copy().home.trust.subtitle }}</p>
+      </div>
+
+      <div class="grid gap-3 sm:grid-cols-2">
+        @for (item of copy().home.trust.items; track item) {
+          <div appReveal [appRevealDelay]="$index * 60" class="micro-lift rounded-lg border border-white/10 bg-white/5 p-5 transition duration-300 hover:border-blue-400/35 hover:bg-white/10 hover:shadow-xl hover:shadow-blue-950/15">
+            <span class="mb-5 block h-1.5 w-10 rounded bg-blue-400"></span>
+            <p class="text-sm font-semibold leading-6 text-white">{{ item }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section id="case-studies" class="soft-divider py-20">
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <app-section-header
+        appReveal
+        [eyebrow]="copy().home.cases.eyebrow"
+        [title]="copy().home.cases.title"
+        [subtitle]="copy().home.cases.subtitle"
+      />
+
+      <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        @for (caseStudy of copy().home.cases.items; track caseStudy.title) {
+          <app-case-study-card
+            appReveal
+            [appRevealDelay]="$index * 55"
+            [caseStudy]="caseStudy"
+            [problemLabel]="copy().home.cases.problem"
+            [solutionLabel]="copy().home.cases.solution"
+            [resultLabel]="copy().home.cases.result"
+          />
+        }
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="px-5 pb-24 sm:px-6 lg:px-8">
+    <div appReveal class="mx-auto max-w-7xl rounded-lg border border-slate-900/10 bg-slate-950 p-6 text-white shadow-2xl shadow-slate-300/50 transition duration-300 hover:border-blue-500/30 dark:border-white/10 dark:bg-white/5 dark:shadow-black/20 sm:p-8 lg:p-10">
+      <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+        <div>
+          <h2 class="max-w-3xl text-3xl font-semibold leading-tight sm:text-4xl">{{ copy().home.finalCta.title }}</h2>
+          <p class="mt-4 max-w-2xl text-base leading-7 text-zinc-300">{{ copy().home.finalCta.text }}</p>
+        </div>
+        <div class="flex flex-col gap-3 md:flex-row lg:flex-col">
+          <app-cta-button href="mailto:nikolasajic7@gmail.com?subject=AI%20automation%20project">
+            {{ copy().home.finalCta.email }}
+          </app-cta-button>
+          <app-cta-button href="https://www.linkedin.com/in/nikola-sajic" target="_blank" variant="secondary">
+            {{ copy().home.finalCta.linkedin }}
+          </app-cta-button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

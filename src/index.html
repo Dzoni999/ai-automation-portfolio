@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <title>Nikola Sajic | AI Automation Engineer</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nikola Sajic helps businesses automate repetitive work using AI, n8n and custom integrations.">
+  <meta name="author" content="Nikola Sajic">
+  <meta name="application-name" content="Nikola Sajic AI Automation">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#05070a">
+  <meta property="og:title" content="Nikola Sajic | AI Automation Engineer">
+  <meta property="og:description" content="AI automations, n8n workflows and custom integrations for practical business work.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>
+    (() => {
+      try {
+        const theme = localStorage.getItem('nikola-sajic-theme');
+        document.documentElement.classList.toggle('dark', theme !== 'light');
+        document.documentElement.style.colorScheme = theme === 'light' ? 'light' : 'dark';
+      } catch {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <a href="#top" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-blue-600 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">
+    Skip to content
+  </a>
+  <app-root>
+    <div style="min-height:100vh;display:grid;place-items:center;background:#05070a;color:#f8fafc;font:14px system-ui,sans-serif;">
+      <div style="display:grid;gap:14px;place-items:center;">
+        <span style="width:34px;height:34px;border:1px solid rgba(59,130,246,.35);border-top-color:#3b82f6;border-radius:999px;animation:spin .9s linear infinite;"></span>
+        <span>Loading Nikola Sajic</span>
+      </div>
+    </div>
+  </app-root>
+  <style>
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</body>
+</html>
