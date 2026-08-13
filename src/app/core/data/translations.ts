@@ -35,7 +35,7 @@ export const translations = {
     home: {
       hero: {
         eyebrow: 'Business workflow automation',
-        title: 'Automate repetitive business work with AI & n8n',
+        title: 'Automate repetitive business work',
         subtitle:
           'I help companies save 10+ hours per week by automating invoice processing, email workflows, PDF data extraction and internal business operations.',
         primaryCta: 'Book a Free 30-Min Consultation',
@@ -233,7 +233,7 @@ export const translations = {
     home: {
       hero: {
         eyebrow: 'Automatizacija poslovnih procesa',
-        title: 'Automatizujte ponavljajući poslovni rad uz AI i n8n',
+        title: 'Automatizujte repetitivne poslovne procese',
         subtitle:
           'Pomažem kompanijama da uštede 10+ sati nedeljno automatizacijom obrade faktura, email workflow-a, izvlačenja podataka iz PDF-ova i internih poslovnih operacija.',
         primaryCta: 'Zakaži besplatne konsultacije',
