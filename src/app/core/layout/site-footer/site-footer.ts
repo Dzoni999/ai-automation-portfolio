@@ -1,8 +1,10 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { LucideArrowUpRight, LucideMail } from '@lucide/angular';
 import { LanguageService } from '../../services/language';
 
 @Component({
   selector: 'app-site-footer',
+  imports: [LucideArrowUpRight, LucideMail],
   templateUrl: './site-footer.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

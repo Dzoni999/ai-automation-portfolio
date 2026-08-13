@@ -5,12 +5,10 @@ import {
   LucideArrowRight,
   LucideCheckCircle2,
   LucideChevronDown,
-  LucideClock3,
   LucideFileText,
   LucideScanText,
   LucideShieldCheck,
-  LucideTableProperties,
-  LucideWrench
+  LucideTableProperties
 } from '@lucide/angular';
 import { LanguageService } from '../../core/services/language';
 import { SeoService } from '../../core/services/seo';
@@ -19,6 +17,7 @@ import { CtaButton } from '../../shared/components/cta-button/cta-button';
 import { HeroAutomationVisual } from '../../shared/components/hero-automation-visual/hero-automation-visual';
 import { SectionHeader } from '../../shared/components/section-header/section-header';
 import { ServiceCard } from '../../shared/components/service-card/service-card';
+import { TrustBadges } from '../../shared/components/trust-badges/trust-badges';
 import { RevealOnScroll } from '../../shared/directives/reveal-on-scroll';
 
 @Component({
@@ -31,15 +30,14 @@ import { RevealOnScroll } from '../../shared/directives/reveal-on-scroll';
     LucideArrowRight,
     LucideCheckCircle2,
     LucideChevronDown,
-    LucideClock3,
     LucideFileText,
     LucideScanText,
     LucideShieldCheck,
     LucideTableProperties,
-    LucideWrench,
     RevealOnScroll,
     SectionHeader,
-    ServiceCard
+    ServiceCard,
+    TrustBadges
   ],
   templateUrl: './home.html',
   changeDetection: ChangeDetectionStrategy.OnPush

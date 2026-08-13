@@ -27,6 +27,9 @@ export const translations = {
     footer: {
       line: 'Practical AI automation for invoices, email and internal business operations.',
       availability: 'Available for freelance projects from Belgrade, Serbia.',
+      email: 'Email',
+      linkedin: 'LinkedIn',
+      github: 'GitHub',
       copyright: 'Nikola Sajić. All rights reserved.'
     },
     home: {
@@ -35,7 +38,7 @@ export const translations = {
         title: 'Automate repetitive business work with AI & n8n',
         subtitle:
           'I help companies save 10+ hours per week by automating invoice processing, email workflows, PDF data extraction and internal business operations.',
-        primaryCta: 'Book Free Consultation',
+        primaryCta: 'Book a Free 30-Min Consultation',
         secondaryCta: 'Watch Demo',
         note: 'Designed around the repetitive operational work that slows teams down.',
         outcomes: ['Invoice processing', 'Email operations', 'Document workflows']
@@ -173,9 +176,9 @@ export const translations = {
         title: "Let's automate your workflow",
         text: "Book a free 30-minute consultation and I'll identify automation opportunities in your business.",
         trust: [
-          { title: 'Free 30-minute consultation', icon: 'clock' },
-          { title: 'Delivery in 2–5 business days', icon: 'check' },
-          { title: 'Custom solutions, not templates', icon: 'wrench' }
+          { title: 'Free 30-Min Consultation', icon: 'clock' },
+          { title: 'Delivery in 2-5 Business Days', icon: 'check' },
+          { title: 'Custom AI Workflow Solutions', icon: 'wrench' }
         ],
         technology: 'Built with n8n, Claude and custom integrations where they fit the workflow.',
         form: {
@@ -222,6 +225,9 @@ export const translations = {
     footer: {
       line: 'Praktična AI automatizacija za fakture, emailove i interne poslovne procese.',
       availability: 'Dostupan za freelance projekte iz Beograda, Srbija.',
+      email: 'Email',
+      linkedin: 'LinkedIn',
+      github: 'GitHub',
       copyright: 'Nikola Sajić. Sva prava zadržana.'
     },
     home: {
@@ -314,8 +320,8 @@ export const translations = {
         text: 'Zakažite besplatne konsultacije od 30 minuta i pronaći ću prilike za automatizaciju u vašem biznisu.',
         trust: [
           { title: 'Besplatne konsultacije od 30 minuta', icon: 'clock' },
-          { title: 'Isporuka za 2–5 radnih dana', icon: 'check' },
-          { title: 'Custom rešenja, ne šabloni', icon: 'wrench' }
+          { title: 'Isporuka za 2-5 radnih dana', icon: 'check' },
+          { title: 'Custom AI workflow rešenja', icon: 'wrench' }
         ],
         technology: 'Gradim uz n8n, Claude i custom integracije tamo gde odgovaraju workflow-u.',
         form: {

@@ -15,6 +15,9 @@
           <app-cta-button href="#contact">{{ copy().home.hero.primaryCta }}</app-cta-button>
           <app-cta-button href="#how-it-works" variant="secondary">{{ copy().home.hero.secondaryCta }}</app-cta-button>
         </div>
+        <div class="mt-4 max-w-3xl">
+          <app-trust-badges [items]="copy().home.contact.trust" />
+        </div>
         <div class="mt-8 grid gap-3 border-l border-slate-900/10 pl-4 dark:border-white/10">
           <p class="max-w-xl text-sm leading-6 text-slate-500 dark:text-zinc-500">{{ copy().home.hero.note }}</p>
           <div class="flex flex-wrap gap-2 text-xs font-semibold text-slate-600 dark:text-zinc-400">
@@ -167,27 +170,16 @@
 
   <section id="contact" class="px-5 py-24 sm:px-6 sm:py-28 lg:px-8">
     <div class="mx-auto max-w-7xl">
-      <div class="grid gap-3 sm:grid-cols-3" appReveal>
-        @for (item of copy().home.contact.trust; track item.title) {
-          <div class="flex items-center gap-3 rounded-lg border border-slate-900/10 bg-white/70 p-4 shadow-sm shadow-slate-200/40 dark:border-white/10 dark:bg-white/5 dark:shadow-black/10">
-            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-md border border-blue-500/20 bg-blue-600/10 text-blue-600 dark:text-blue-300">
-              @switch (item.icon) {
-                @case ('clock') { <svg lucideClock3 class="h-4 w-4" aria-hidden="true"></svg> }
-                @case ('check') { <svg lucideCheckCircle2 class="h-4 w-4" aria-hidden="true"></svg> }
-                @case ('wrench') { <svg lucideWrench class="h-4 w-4" aria-hidden="true"></svg> }
-              }
-            </span>
-            <p class="text-sm font-semibold leading-5 text-slate-800 dark:text-zinc-100">{{ item.title }}</p>
-          </div>
-        }
+      <div appReveal>
+        <app-trust-badges [items]="copy().home.contact.trust" />
       </div>
 
-      <div appReveal [appRevealDelay]="90" class="mt-4 rounded-lg border border-slate-900/10 bg-slate-950 p-6 text-white shadow-2xl shadow-slate-300/50 dark:border-white/10 dark:bg-white/5 dark:shadow-black/20 sm:p-8 lg:p-10">
+      <div appReveal [appRevealDelay]="90" class="mt-4 rounded-lg border border-slate-200 bg-white p-6 text-slate-950 shadow-2xl shadow-slate-300/50 dark:border-white/10 dark:bg-white/5 dark:text-white dark:shadow-black/20 sm:p-8 lg:p-10">
         <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <h2 class="max-w-xl text-3xl font-semibold leading-tight sm:text-4xl">{{ copy().home.contact.title }}</h2>
-            <p class="mt-4 max-w-xl text-base leading-7 text-zinc-300">{{ copy().home.contact.text }}</p>
-            <div class="mt-8 flex items-center gap-3 border-t border-white/10 pt-6 text-sm leading-6 text-zinc-400">
+            <p class="mt-4 max-w-xl text-base leading-7 text-slate-600 dark:text-zinc-300">{{ copy().home.contact.text }}</p>
+            <div class="mt-8 flex items-center gap-3 border-t border-slate-200 pt-6 text-sm leading-6 text-slate-500 dark:border-white/10 dark:text-zinc-400">
               <svg lucideShieldCheck class="h-5 w-5 shrink-0 text-blue-300" aria-hidden="true"></svg>
               <p>{{ copy().home.contact.technology }}</p>
             </div>
@@ -195,28 +187,28 @@
 
           <form class="grid gap-4" (submit)="sendInquiry($event)">
             <div class="grid gap-4 sm:grid-cols-2">
-              <label class="grid gap-2 text-sm font-medium text-zinc-200">
+              <label class="grid gap-2 text-sm font-medium text-slate-700 dark:text-zinc-200">
                 {{ copy().home.contact.form.name }}
-                <input name="name" type="text" autocomplete="name" required class="h-11 rounded-md border border-white/10 bg-white/5 px-3 text-white outline-none transition placeholder:text-zinc-500 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20" [placeholder]="copy().home.contact.form.namePlaceholder" />
+                <input name="name" type="text" autocomplete="name" required class="h-11 rounded-md border border-slate-200 bg-slate-50 px-3 text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-zinc-500 dark:focus:border-blue-400 dark:focus:ring-blue-400/20" [placeholder]="copy().home.contact.form.namePlaceholder" />
               </label>
-              <label class="grid gap-2 text-sm font-medium text-zinc-200">
+              <label class="grid gap-2 text-sm font-medium text-slate-700 dark:text-zinc-200">
                 {{ copy().home.contact.form.email }}
-                <input name="email" type="email" autocomplete="email" required class="h-11 rounded-md border border-white/10 bg-white/5 px-3 text-white outline-none transition placeholder:text-zinc-500 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20" [placeholder]="copy().home.contact.form.emailPlaceholder" />
+                <input name="email" type="email" autocomplete="email" required class="h-11 rounded-md border border-slate-200 bg-slate-50 px-3 text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-zinc-500 dark:focus:border-blue-400 dark:focus:ring-blue-400/20" [placeholder]="copy().home.contact.form.emailPlaceholder" />
               </label>
             </div>
-            <label class="grid gap-2 text-sm font-medium text-zinc-200">
+            <label class="grid gap-2 text-sm font-medium text-slate-700 dark:text-zinc-200">
               {{ copy().home.contact.form.company }}
-              <input name="company" type="text" autocomplete="organization" class="h-11 rounded-md border border-white/10 bg-white/5 px-3 text-white outline-none transition placeholder:text-zinc-500 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20" [placeholder]="copy().home.contact.form.companyPlaceholder" />
+              <input name="company" type="text" autocomplete="organization" class="h-11 rounded-md border border-slate-200 bg-slate-50 px-3 text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-zinc-500 dark:focus:border-blue-400 dark:focus:ring-blue-400/20" [placeholder]="copy().home.contact.form.companyPlaceholder" />
             </label>
-            <label class="grid gap-2 text-sm font-medium text-zinc-200">
+            <label class="grid gap-2 text-sm font-medium text-slate-700 dark:text-zinc-200">
               {{ copy().home.contact.form.message }}
-              <textarea name="message" rows="4" required class="min-h-28 rounded-md border border-white/10 bg-white/5 px-3 py-2.5 text-white outline-none transition placeholder:text-zinc-500 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20" [placeholder]="copy().home.contact.form.messagePlaceholder"></textarea>
+              <textarea name="message" rows="4" required class="min-h-28 rounded-md border border-slate-200 bg-slate-50 px-3 py-2.5 text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-zinc-500 dark:focus:border-blue-400 dark:focus:ring-blue-400/20" [placeholder]="copy().home.contact.form.messagePlaceholder"></textarea>
             </label>
             <button type="submit" class="micro-lift inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-500 hover:shadow-blue-600/35 focus-visible:outline-none">
               {{ copy().home.contact.form.submit }}
               <svg lucideArrowRight class="h-4 w-4" aria-hidden="true"></svg>
             </button>
-            <p class="text-xs leading-5 text-zinc-500">{{ copy().home.contact.form.hint }}</p>
+            <p class="text-xs leading-5 text-slate-500 dark:text-zinc-500">{{ copy().home.contact.form.hint }}</p>
           </form>
         </div>
       </div>
