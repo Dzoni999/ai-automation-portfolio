@@ -63,9 +63,9 @@ export class SeoService {
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Person',
-      name: 'Nikola Sajic',
+      name: 'Nikola Sajić',
       url,
-      jobTitle: 'AI Automation Engineer',
+      jobTitle: 'AI Workflow Automation Consultant',
       email: 'mailto:nikolasajic7@gmail.com',
       address: {
         '@type': 'PostalAddress',

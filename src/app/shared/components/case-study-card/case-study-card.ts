@@ -1,10 +1,9 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 export type CaseStudyCardData = {
-  title: string;
-  problem: string;
-  solution: string;
-  result: string;
+  problemItems: readonly string[];
+  solutionItems: readonly string[];
+  resultBadge: string;
 };
 
 @Component({
