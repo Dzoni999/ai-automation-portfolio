@@ -15,6 +15,7 @@ export class SeoService {
 
   update(data: SeoData): void {
     const pageUrl = this.currentPageUrl();
+    const imageUrl = new URL('/og-image.svg', pageUrl).toString();
 
     this.title.setTitle(data.title);
     this.meta.updateTag({ name: 'description', content: data.description });
@@ -28,9 +29,13 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:type', content: 'website' });
     this.meta.updateTag({ property: 'og:site_name', content: 'Nikola Sajic' });
     this.meta.updateTag({ property: 'og:url', content: pageUrl });
+    this.meta.updateTag({ property: 'og:image', content: imageUrl });
+    this.meta.updateTag({ property: 'og:image:alt', content: data.title });
     this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
     this.meta.updateTag({ name: 'twitter:title', content: data.title });
     this.meta.updateTag({ name: 'twitter:description', content: data.description });
+    this.meta.updateTag({ name: 'twitter:image', content: imageUrl });
+    this.meta.updateTag({ name: 'twitter:image:alt', content: data.title });
     this.meta.updateTag({ name: 'twitter:creator', content: '@Dzoni999' });
     this.upsertCanonical(pageUrl);
     this.upsertStructuredData(pageUrl);

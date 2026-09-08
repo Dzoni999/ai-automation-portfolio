@@ -1,0 +1,38 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#05070A"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="160" y1="110" x2="1040" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0.95"/>
+    </linearGradient>
+    <filter id="glow" x="0" y="0" width="1200" height="630" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="24" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 0.7 1 0 0  0 0 1 0 0  0 0 0 0.32 0" result="glow"/>
+      <feBlend in="SourceGraphic" in2="glow" mode="screen"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="120" r="180" fill="#2563EB" fill-opacity="0.18" filter="url(#glow)"/>
+  <circle cx="180" cy="520" r="220" fill="#38BDF8" fill-opacity="0.12" filter="url(#glow)"/>
+  <path d="M112 470C240 366 368 345 504 365C640 385 730 442 865 424C978 409 1060 347 1110 294" stroke="url(#accent)" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 14" opacity="0.65"/>
+  <rect x="92" y="88" width="1016" height="454" rx="36" fill="white" fill-opacity="0.04" stroke="white" stroke-opacity="0.09"/>
+  <g transform="translate(124 128)">
+    <rect x="0" y="0" width="68" height="68" rx="18" fill="url(#accent)"/>
+    <path d="M23 42.5V24.5H30.2C33.9 24.5 36.3 26.6 36.3 29.8C36.3 32.6 34.4 34.6 31.6 35.1L37.3 42.5H32.5L27.4 35.3H27.2V42.5H23ZM27.2 31.9H29.8C31.8 31.9 32.9 31 32.9 29.7C32.9 28.3 31.8 27.5 29.9 27.5H27.2V31.9Z" fill="white"/>
+    <path d="M45.6 42.9C41 42.9 37.9 39.8 37.9 35.9C37.9 32 41 28.9 45.6 28.9C50.2 28.9 53.3 32 53.3 35.9C53.3 39.8 50.2 42.9 45.6 42.9ZM45.6 39.5C47.6 39.5 49 38.1 49 35.9C49 33.7 47.6 32.3 45.6 32.3C43.6 32.3 42.2 33.7 42.2 35.9C42.2 38.1 43.6 39.5 45.6 39.5Z" fill="white"/>
+    <text x="92" y="28" fill="#93C5FD" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="0.08em">NIKOLA SAJIĆ</text>
+    <text x="92" y="82" fill="white" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="58" font-weight="800">AI automation for businesses</text>
+    <text x="92" y="138" fill="#CBD5E1" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="28" font-weight="500">Streamline invoices, email workflows, and repetitive operations</text>
+    <g transform="translate(92 182)">
+      <rect x="0" y="0" width="212" height="50" rx="25" fill="#2563EB" fill-opacity="0.2" stroke="#60A5FA" stroke-opacity="0.35"/>
+      <text x="24" y="32" fill="#DBEAFE" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">n8n + Claude + APIs</text>
+    </g>
+    <g transform="translate(328 182)">
+      <rect x="0" y="0" width="240" height="50" rx="25" fill="#0F172A" fill-opacity="0.55" stroke="white" stroke-opacity="0.12"/>
+      <text x="24" y="32" fill="#E2E8F0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Belgrade, Serbia</text>
+    </g>
+  </g>
+</svg>

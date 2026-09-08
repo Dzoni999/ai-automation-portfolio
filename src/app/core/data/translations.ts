@@ -35,13 +35,18 @@ export const translations = {
     home: {
       hero: {
         eyebrow: 'Business workflow automation',
-        title: 'Automate repetitive business work',
+        title: 'Automate invoice processing and repetitive operations',
         subtitle:
-          'I help companies save 10+ hours per week by automating invoice processing, email workflows, PDF data extraction and internal business operations.',
-        primaryCta: 'Book a Free 30-Min Consultation',
-        secondaryCta: 'Watch Demo',
-        note: 'Designed around the repetitive operational work that slows teams down.',
-        outcomes: ['Invoice processing', 'Email operations', 'Document workflows']
+          'I build practical AI workflows that read invoices from email, extract the important data and send it to Excel or your ERP — while keeping exceptions visible for your team.',
+        primaryCta: 'Get a Free Workflow Audit',
+        secondaryCta: 'See How It Works',
+        note: 'Best for teams processing recurring PDFs, emails and spreadsheets by hand.',
+        outcomes: ['Invoice processing', 'Email operations', 'Document workflows'],
+        proof: [
+          { value: '10+', label: 'hours saved weekly' },
+          { value: '2–5', label: 'days to delivery' },
+          { value: 'Free', label: '30-min consultation' }
+        ]
       },
       visual: {
         label: 'Invoice workflow preview',
@@ -136,8 +141,8 @@ export const translations = {
       },
       cases: {
         eyebrow: 'Case study',
-        title: 'Real Business Example',
-        subtitle: 'A document workflow where AI handles repeatable extraction and people handle the exceptions.',
+        title: 'A workflow that removes weekly admin',
+        subtitle: 'A practical invoice process where AI handles repeatable extraction and people handle the exceptions.',
         problem: 'Problem',
         solution: 'Solution',
         result: 'Result',
@@ -173,8 +178,8 @@ export const translations = {
         ]
       },
       contact: {
-        title: "Let's automate your workflow",
-        text: "Book a free 30-minute consultation and I'll identify automation opportunities in your business.",
+        title: 'Get a free workflow audit',
+        text: "Tell me about one repetitive process. I'll identify what can be automated and show you a practical next step.",
         trust: [
           { title: 'Free 30-Min Consultation', icon: 'clock' },
           { title: 'Delivery in 2-5 Business Days', icon: 'check' },
@@ -192,7 +197,20 @@ export const translations = {
           messagePlaceholder: 'For example: invoices arrive by email and are entered into Excel manually.',
           submit: 'Start the conversation',
           subject: 'Automation consultation request',
-          hint: 'This opens your email client with the details prefilled.'
+          hint: 'No obligation. I will reply with practical automation ideas for your process.',
+          sending: 'Sending your message…',
+          sendingHint: 'Please wait while I send your request to Formspree.',
+          success: 'Message sent successfully.',
+          submitError: 'Sorry, the message could not be sent right now. Please try again.',
+          error: 'Please fix the highlighted fields and try again.',
+          validationError: 'Please fix the highlighted fields and try again.',
+          validation: {
+            name: 'Your name is required.',
+            emailRequired: 'Your email is required.',
+            emailInvalid: 'Enter a valid email address.',
+            company: 'Company is required.',
+            message: 'Please add a short description of what you want to automate.'
+          }
         }
       }
     }
@@ -233,13 +251,18 @@ export const translations = {
     home: {
       hero: {
         eyebrow: 'Automatizacija poslovnih procesa',
-        title: 'Automatizujte repetitivne poslovne procese',
+        title: 'Automatizujte obradu faktura i repetitivne procese',
         subtitle:
-          'Pomažem kompanijama da uštede 10+ sati nedeljno automatizacijom obrade faktura, email workflow-a, izvlačenja podataka iz PDF-ova i internih poslovnih operacija.',
-        primaryCta: 'Zakaži besplatne konsultacije',
-        secondaryCta: 'Pogledaj demo',
-        note: 'Dizajnirano za operativne zadatke koji svakodnevno usporavaju tim.',
-        outcomes: ['Obrada faktura', 'Email operacije', 'Workflow za dokumenta']
+          'Gradim praktične AI workflow-e koji čitaju fakture iz emaila, izvlače važne podatke i šalju ih u Excel ili ERP — dok izuzeci ostaju vidljivi vašem timu.',
+        primaryCta: 'Zatražite besplatan audit workflow-a',
+        secondaryCta: 'Pogledajte kako funkcioniše',
+        note: 'Najkorisnije za timove koji ručno obrađuju PDF-ove, emailove i tabele.',
+        outcomes: ['Obrada faktura', 'Email operacije', 'Workflow za dokumenta'],
+        proof: [
+          { value: '10+', label: 'sati uštede nedeljno' },
+          { value: '2–5', label: 'dana do isporuke' },
+          { value: 'Besplatno', label: '30-min konsultacije' }
+        ]
       },
       visual: {
         label: 'Primer workflow-a za fakture',
@@ -294,8 +317,8 @@ export const translations = {
       },
       cases: {
         eyebrow: 'Primer iz prakse',
-        title: 'Stvarni poslovni primer',
-        subtitle: 'Workflow za dokumenta gde AI radi ponavljajuće izvlačenje, a ljudi obrađuju izuzetke.',
+        title: 'Workflow koji uklanja nedeljnu administraciju',
+        subtitle: 'Praktičan proces za fakture gde AI radi ponavljajuće izvlačenje, a ljudi obrađuju izuzetke.',
         problem: 'Problem',
         solution: 'Rešenje',
         result: 'Rezultat',
@@ -316,8 +339,8 @@ export const translations = {
         ]
       },
       contact: {
-        title: 'Hajde da automatizujemo vaš workflow',
-        text: 'Zakažite besplatne konsultacije od 30 minuta i pronaći ću prilike za automatizaciju u vašem biznisu.',
+        title: 'Zatražite besplatan audit workflow-a',
+        text: 'Opišite jedan repetitivan proces. Pokazaću šta može da se automatizuje i koji bi bio praktičan sledeći korak.',
         trust: [
           { title: 'Besplatne konsultacije od 30 minuta', icon: 'clock' },
           { title: 'Isporuka za 2-5 radnih dana', icon: 'check' },
@@ -329,7 +352,20 @@ export const translations = {
           namePlaceholder: 'Vaše ime', emailPlaceholder: 'vi@kompanija.com', companyPlaceholder: 'Ime kompanije',
           messagePlaceholder: 'Na primer: fakture stižu emailom i ručno se unose u Excel.',
           submit: 'Započni razgovor', subject: 'Zahtev za konsultacije o automatizaciji',
-          hint: 'Otvoriće se email klijent sa unapred popunjenim detaljima.'
+          hint: 'Bez obaveze. Dobićete praktične ideje za automatizaciju vašeg procesa.',
+          sending: 'Šaljem poruku…',
+          sendingHint: 'Sačekaj trenutak dok šaljem upit preko Formspree servisa.',
+          success: 'Poruka je uspešno poslata.',
+          submitError: 'Nažalost, poruka trenutno nije mogla da se pošalje. Pokušaj ponovo.',
+          error: 'Ispravi označena polja i pokušaj ponovo.',
+          validationError: 'Ispravi označena polja i pokušaj ponovo.',
+          validation: {
+            name: 'Ime je obavezno.',
+            emailRequired: 'Email je obavezan.',
+            emailInvalid: 'Unesi ispravan email format.',
+            company: 'Kompanija je obavezna.',
+            message: 'Dodaj kratak opis šta želiš da automatizuješ.'
+          }
         }
       }
     }

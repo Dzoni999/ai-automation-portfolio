@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, effect, inject, signal } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
 import {
   LucideArchive,
   LucideArrowRight,
@@ -19,6 +18,10 @@ import { SectionHeader } from '../../shared/components/section-header/section-he
 import { ServiceCard } from '../../shared/components/service-card/service-card';
 import { TrustBadges } from '../../shared/components/trust-badges/trust-badges';
 import { RevealOnScroll } from '../../shared/directives/reveal-on-scroll';
+
+type InquiryField = 'name' | 'email' | 'company' | 'message';
+
+type InquiryErrors = Partial<Record<InquiryField, string>>;
 
 @Component({
   selector: 'app-home',
@@ -43,12 +46,14 @@ import { RevealOnScroll } from '../../shared/directives/reveal-on-scroll';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Home {
-  private readonly document = inject(DOCUMENT);
   private readonly languageService = inject(LanguageService);
   private readonly seo = inject(SeoService);
 
   protected readonly copy = this.languageService.copy;
   protected readonly activeFaq = signal<number | null>(null);
+  protected readonly inquiryStatus = signal<'idle' | 'sending' | 'success' | 'error'>('idle');
+  protected readonly inquiryMessage = signal('');
+  protected readonly inquiryErrors = signal<InquiryErrors>({});
 
   constructor() {
     effect(() => {
@@ -60,22 +65,75 @@ export class Home {
     this.activeFaq.update((active) => (active === index ? null : index));
   }
 
-  protected sendInquiry(event: SubmitEvent): void {
+  protected async sendInquiry(event: SubmitEvent): Promise<void> {
     event.preventDefault();
     const form = event.currentTarget as HTMLFormElement;
     const data = new FormData(form);
     const contact = this.copy().home.contact;
-    const message = [
-      `${contact.form.name}: ${data.get('name')}`,
-      `${contact.form.email}: ${data.get('email')}`,
-      `${contact.form.company}: ${data.get('company') || '-'}`,
-      '',
-      `${contact.form.message}:`,
-      String(data.get('message') || '')
-    ].join('\n');
 
-    this.document.defaultView?.location.assign(
-      `mailto:nikolasajic7@gmail.com?subject=${encodeURIComponent(contact.form.subject)}&body=${encodeURIComponent(message)}`
-    );
+    const name = String(data.get('name') || '').trim();
+    const email = String(data.get('email') || '').trim();
+    const company = String(data.get('company') || '').trim();
+    const message = String(data.get('message') || '').trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const errors: InquiryErrors = {};
+
+    if (!name) errors.name = contact.form.validation.name;
+    if (!email) errors.email = contact.form.validation.emailRequired;
+    else if (!emailPattern.test(email)) errors.email = contact.form.validation.emailInvalid;
+    if (!company) errors.company = contact.form.validation.company;
+    if (!message) errors.message = contact.form.validation.message;
+
+    if (Object.keys(errors).length > 0) {
+      this.inquiryStatus.set('error');
+      this.inquiryMessage.set(contact.form.validationError);
+      this.inquiryErrors.set(errors);
+      form.reportValidity();
+      return;
+    }
+
+    this.inquiryStatus.set('sending');
+    this.inquiryMessage.set(contact.form.sending);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xbgjyqvp', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          company,
+          message,
+          _replyto: email,
+          _subject: contact.form.subject
+        })
+      });
+
+      if (!response.ok) {
+        let message: string = contact.form.submitError;
+        try {
+          const payload = (await response.json()) as { errors?: Array<{ message?: string }> };
+          const apiMessage = payload?.errors?.[0]?.message;
+          if (apiMessage) message = apiMessage;
+        } catch {
+          // ignore JSON parsing errors and fall back to the generic message
+        }
+
+        this.inquiryStatus.set('error');
+        this.inquiryMessage.set(message);
+        return;
+      }
+
+      this.inquiryStatus.set('success');
+      this.inquiryMessage.set(contact.form.success);
+      this.inquiryErrors.set({});
+      form.reset();
+    } catch {
+      this.inquiryStatus.set('error');
+      this.inquiryMessage.set(contact.form.submitError);
+    }
   }
 }
