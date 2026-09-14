@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { LucideArrowUpRight, LucideMail } from '@lucide/angular';
 import { LanguageService } from '../../services/language';
+import { RevealOnScroll } from '../../../shared/directives/reveal-on-scroll';
 
 @Component({
   selector: 'app-site-footer',
-  imports: [LucideArrowUpRight, LucideMail],
+  imports: [LucideArrowUpRight, LucideMail, RevealOnScroll],
   templateUrl: './site-footer.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

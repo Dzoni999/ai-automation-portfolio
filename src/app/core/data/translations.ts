@@ -64,7 +64,17 @@ export const translations = {
         metricThree: 'Fallback',
         metricThreeValue: 'Human review',
         reviewDetail: 'Manual check',
-        status: 'Ready to automate'
+        status: 'Ready to automate',
+        processEyebrow: 'Live workflow',
+        processSubtitle: 'Watch the process move from inbox to structured output.',
+        processBadge: 'Scroll-activated',
+        process: [
+          { title: 'Email', detail: 'Invoice arrives' },
+          { title: 'PDF', detail: 'Document is read' },
+          { title: 'AI', detail: 'Fields are extracted' },
+          { title: 'Structured data', detail: 'Values are validated' },
+          { title: 'Excel / ERP', detail: 'Record is updated' }
+        ]
       },
       howItWorks: {
         eyebrow: 'One practical workflow',
@@ -280,7 +290,17 @@ export const translations = {
         metricThree: 'Izuzeci',
         metricThreeValue: 'Ručna provera',
         reviewDetail: 'Ručna provera',
-        status: 'Spremno za automatizaciju'
+        status: 'Spremno za automatizaciju',
+        processEyebrow: 'Živi workflow',
+        processSubtitle: 'Pogledajte kako proces ide od inboxa do strukturiranog rezultata.',
+        processBadge: 'Aktivira se skrolom',
+        process: [
+          { title: 'Email', detail: 'Faktura stiže' },
+          { title: 'PDF', detail: 'Dokument se čita' },
+          { title: 'AI', detail: 'Podaci se izvlače' },
+          { title: 'Strukturirani podaci', detail: 'Vrednosti se proveravaju' },
+          { title: 'Excel / ERP', detail: 'Zapis se ažurira' }
+        ]
       },
       howItWorks: {
         eyebrow: 'Jedan praktičan workflow',

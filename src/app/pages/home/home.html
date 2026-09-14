@@ -1,24 +1,24 @@
 <main id="top" class="page-shell overflow-hidden">
-  <section class="relative">
+  <section class="hero-section relative">
     <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-24 pt-16 sm:px-6 sm:pt-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:pb-32 lg:pt-24">
       <div class="max-w-3xl" appReveal>
         <p class="inline-flex rounded-md border border-blue-500/20 bg-blue-600/10 px-3 py-1 text-sm font-semibold text-blue-700 dark:text-blue-300">
           {{ copy().home.hero.eyebrow }}
         </p>
-        <h1 class="mt-7 text-4xl font-semibold leading-[1.05] text-slate-950 sm:text-5xl lg:text-6xl dark:text-white">
+        <h1 class="hero-title mt-7 text-4xl font-semibold leading-[1.05] text-slate-950 sm:text-5xl lg:text-6xl dark:text-white">
           {{ copy().home.hero.title }}
         </h1>
-        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-zinc-400">
+        <p class="hero-subtitle mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-zinc-400">
           {{ copy().home.hero.subtitle }}
         </p>
-        <div class="mt-8 flex flex-col gap-3 md:flex-row">
+        <div class="hero-actions mt-8 flex flex-col gap-3 md:flex-row">
           <app-cta-button href="#contact">{{ copy().home.hero.primaryCta }}</app-cta-button>
           <app-cta-button href="#how-it-works" variant="secondary">{{ copy().home.hero.secondaryCta }}</app-cta-button>
         </div>
         <div class="mt-4 max-w-3xl">
           <app-trust-badges [items]="copy().home.contact.trust" />
         </div>
-        <div class="mt-7 grid max-w-2xl grid-cols-3 divide-x divide-slate-900/10 rounded-lg border border-slate-900/10 bg-white/70 py-4 dark:divide-white/10 dark:border-white/10 dark:bg-white/[0.035]">
+        <div class="hero-proof mt-7 grid max-w-2xl grid-cols-3 divide-x divide-slate-900/10 rounded-lg border border-slate-900/10 bg-white/70 py-4 dark:divide-white/10 dark:border-white/10 dark:bg-white/[0.035]">
           @for (item of copy().home.hero.proof; track item.label) {
             <div class="px-3 text-center first:pl-2 last:pr-2 sm:px-5">
               <p class="text-lg font-semibold text-slate-950 dark:text-white sm:text-xl">{{ item.value }}</p>
@@ -53,7 +53,7 @@
 
       <ol class="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4" role="list">
         @for (step of copy().home.howItWorks.steps; track step.title; let index = $index) {
-          <li appReveal [appRevealDelay]="index * 65" class="relative">
+          <li appReveal [appRevealDelay]="index * 90" [class.reveal-from-left]="index % 2 === 0" [class.reveal-from-right]="index % 2 === 1" class="relative">
             @if (index < 3) {
               <span class="absolute left-[calc(100%-0.25rem)] top-5 hidden w-5 text-blue-500 xl:block" aria-hidden="true">
                 <svg lucideArrowRight class="h-5 w-5"></svg>
@@ -91,7 +91,7 @@
 
       <div class="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         @for (service of copy().home.services.items; track service.title; let index = $index) {
-          <app-service-card appReveal [appRevealDelay]="index * 55" [service]="service" />
+          <app-service-card appReveal [appRevealDelay]="index * 110" [service]="service" />
         }
       </div>
     </div>
@@ -109,6 +109,7 @@
       <div class="mt-12" appReveal [appRevealDelay]="80">
         <app-case-study-card
           [caseStudy]="copy().home.cases"
+          [workflow]="copy().home.visual"
           [problemLabel]="copy().home.cases.problem"
           [solutionLabel]="copy().home.cases.solution"
           [resultLabel]="copy().home.cases.result"
@@ -128,7 +129,7 @@
 
       <div class="grid gap-4 sm:grid-cols-2">
         @for (outcome of copy().home.outcomes.items; track outcome.title; let index = $index) {
-          <article appReveal [appRevealDelay]="index * 65" class="micro-lift rounded-lg border border-slate-900/10 bg-white p-6 shadow-sm shadow-slate-200/50 transition duration-300 hover:border-blue-500/35 hover:shadow-xl hover:shadow-slate-200/70 dark:border-white/10 dark:bg-white/5 dark:shadow-black/10 dark:hover:border-blue-400/40 dark:hover:shadow-blue-950/20">
+          <article appReveal [appRevealDelay]="index * 100" [class.reveal-from-left]="index % 2 === 0" [class.reveal-from-right]="index % 2 === 1" class="micro-lift rounded-lg border border-slate-900/10 bg-white p-6 shadow-sm shadow-slate-200/50 transition duration-300 hover:border-blue-500/35 hover:shadow-xl hover:shadow-slate-200/70 dark:border-white/10 dark:bg-white/5 dark:shadow-black/10 dark:hover:border-blue-400/40 dark:hover:shadow-blue-950/20">
             <span class="grid h-8 w-8 place-items-center rounded-md bg-blue-600/10 text-blue-600 dark:text-blue-300">
               <svg lucideCheckCircle2 class="h-4 w-4" aria-hidden="true"></svg>
             </span>
@@ -193,10 +194,10 @@
             </div>
           </div>
 
-          <form class="grid gap-4" (submit)="sendInquiry($event)" novalidate>
+          <form appReveal [appRevealDelay]="150" class="contact-form grid gap-4" (submit)="sendInquiry($event)" novalidate>
             <div class="rounded-2xl border border-slate-900/5 bg-slate-50/80 p-4 shadow-inner dark:border-white/5 dark:bg-white/[0.03]">
               <div class="grid gap-4 sm:grid-cols-2">
-                <label class="grid gap-2 text-sm font-medium text-slate-700 dark:text-zinc-200">
+                <label class="contact-field grid gap-2 text-sm font-medium text-slate-700 dark:text-zinc-200">
                   <span>{{ copy().home.contact.form.name }}</span>
                   <input
                     name="name"
@@ -212,7 +213,7 @@
                     <p class="text-xs font-medium text-rose-600 dark:text-rose-300">{{ inquiryErrors().name }}</p>
                   }
                 </label>
-                <label class="grid gap-2 text-sm font-medium text-slate-700 dark:text-zinc-200">
+                <label class="contact-field grid gap-2 text-sm font-medium text-slate-700 dark:text-zinc-200">
                   <span>{{ copy().home.contact.form.email }}</span>
                   <input
                     name="email"
@@ -231,7 +232,7 @@
               </div>
 
               <div class="mt-4 grid gap-4">
-                <label class="grid gap-2 text-sm font-medium text-slate-700 dark:text-zinc-200">
+                <label class="contact-field grid gap-2 text-sm font-medium text-slate-700 dark:text-zinc-200">
                   <span>{{ copy().home.contact.form.company }}</span>
                   <input
                     name="company"
@@ -248,7 +249,7 @@
                   }
                 </label>
 
-                <label class="grid gap-2 text-sm font-medium text-slate-700 dark:text-zinc-200">
+                <label class="contact-field grid gap-2 text-sm font-medium text-slate-700 dark:text-zinc-200">
                   <span>{{ copy().home.contact.form.message }}</span>
                   <textarea
                     name="message"
@@ -265,7 +266,7 @@
                 </label>
               </div>
 
-              <button type="submit" class="micro-lift mt-5 inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-500 hover:shadow-blue-600/35 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-70" [disabled]="inquiryStatus() === 'sending'">
+              <button type="submit" class="contact-submit micro-lift mt-5 inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-500 hover:shadow-blue-600/35 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-70" [disabled]="inquiryStatus() === 'sending'">
                 @if (inquiryStatus() === 'sending') {
                   {{ copy().home.contact.form.sending }}
                 } @else {
@@ -275,7 +276,7 @@
               </button>
             </div>
 
-            <div class="min-h-14" aria-live="polite">
+            <div class="contact-status min-h-14" aria-live="polite">
               @if (inquiryStatus() === 'success') {
                 <div class="rounded-lg border border-emerald-500/20 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-700 dark:text-emerald-300">
                   <div class="flex items-start gap-2">

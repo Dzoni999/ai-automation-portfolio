@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, HostListener, inject, signal } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { LanguageService } from '../../services/language';
 import { ThemeService } from '../../services/theme';
@@ -17,6 +17,7 @@ export class SiteHeader {
   protected readonly language = this.languageService.language;
   protected readonly theme = this.themeService.theme;
   protected readonly menuOpen = signal(false);
+  protected readonly scrolled = signal(false);
 
   protected readonly navItems = computed(() => {
     const nav = this.copy().nav;
@@ -43,5 +44,10 @@ export class SiteHeader {
 
   protected toggleTheme(): void {
     this.themeService.toggleTheme();
+  }
+
+  @HostListener('window:scroll')
+  protected onWindowScroll(): void {
+    this.scrolled.set(window.scrollY > 18);
   }
 }
