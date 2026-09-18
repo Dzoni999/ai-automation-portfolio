@@ -24,6 +24,7 @@ export class SiteHeader {
     return [
       { label: nav.home, href: '#top' },
       { label: nav.services, href: '#services' },
+      { label: nav.pricing, href: '#pricing' },
       { label: nav.caseStudies, href: '#case-studies' },
       { label: nav.about, href: '#about' },
       { label: nav.contact, href: '#contact' }

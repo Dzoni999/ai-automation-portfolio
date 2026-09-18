@@ -97,6 +97,65 @@
     </div>
   </section>
 
+  <section id="pricing" class="soft-divider border-y border-slate-900/10 bg-white/55 py-24 dark:border-white/10 dark:bg-white/[0.025] sm:py-28">
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <app-section-header
+        appReveal
+        [eyebrow]="copy().home.pricing.eyebrow"
+        [title]="copy().home.pricing.title"
+        [subtitle]="copy().home.pricing.subtitle"
+      />
+
+      <p appReveal [appRevealDelay]="70" class="mt-5 max-w-3xl text-sm leading-6 text-slate-500 dark:text-zinc-400">{{ copy().home.pricing.note }}</p>
+
+      <div class="mt-12 grid gap-5 lg:grid-cols-3">
+        @for (plan of copy().home.pricing.plans; track plan.name; let index = $index) {
+          <article
+            appReveal
+            [appRevealDelay]="index * 110 + 110"
+            [class.pricing-card-featured]="plan.featured"
+            class="pricing-card relative flex h-full flex-col rounded-xl border border-slate-900/10 bg-white p-6 shadow-sm shadow-slate-200/50 transition duration-300 dark:border-white/10 dark:bg-white/5 dark:shadow-black/10 sm:p-7"
+          >
+            @if (plan.featured) {
+              <span class="pricing-badge absolute -top-3 left-6 rounded-full border border-blue-500/25 bg-blue-600 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-white shadow-lg shadow-blue-600/20">{{ plan.featured }}</span>
+            }
+
+            <div class="min-h-32">
+              <p class="text-sm font-semibold text-slate-950 dark:text-white">{{ plan.name }}</p>
+              <div class="mt-5 flex flex-wrap items-end gap-x-2 gap-y-1">
+                <span class="text-3xl font-semibold tracking-tight text-slate-950 dark:text-white">{{ plan.price }}</span>
+                @if (plan.priceNote) {
+                  <span class="mb-1 text-xs text-slate-500 dark:text-zinc-400">{{ plan.priceNote }}</span>
+                }
+              </div>
+              <p class="mt-4 text-sm leading-6 text-slate-600 dark:text-zinc-400">{{ plan.description }}</p>
+            </div>
+
+            <div class="my-7 h-px bg-slate-900/10 dark:bg-white/10"></div>
+
+            <ul class="grid flex-1 gap-3" role="list">
+              @for (feature of plan.features; track feature) {
+                <li class="flex items-start gap-3 text-sm leading-6 text-slate-600 dark:text-zinc-300">
+                  <svg lucideCheckCircle2 class="mt-0.5 h-4 w-4 shrink-0 text-blue-600 dark:text-blue-300" aria-hidden="true"></svg>
+                  <span>{{ feature }}</span>
+                </li>
+              }
+            </ul>
+
+            <app-cta-button href="#contact" [variant]="plan.featured ? 'primary' : 'secondary'" class="mt-8 w-full">{{ plan.cta }}</app-cta-button>
+          </article>
+        }
+      </div>
+
+      <div appReveal [appRevealDelay]="470" class="pricing-support mt-5 flex flex-col gap-3 rounded-xl border border-blue-500/20 bg-blue-600/[0.045] p-5 dark:bg-blue-400/[0.06] sm:flex-row sm:items-center sm:justify-between sm:p-6">
+        <div>
+          <p class="text-sm font-semibold text-slate-950 dark:text-white">{{ copy().home.pricing.support.label }}</p>
+          <p class="mt-1 text-sm leading-6 text-slate-600 dark:text-zinc-400">{{ copy().home.pricing.support.text }}</p>
+        </div>
+        <p class="shrink-0 text-lg font-semibold text-blue-700 dark:text-blue-200">{{ copy().home.pricing.support.price }}</p>
+      </div>
+    </div>
+  </section>
   <section id="case-studies" class="soft-divider border-y border-slate-900/10 bg-white/55 py-24 dark:border-white/10 dark:bg-white/[0.025] sm:py-28">
     <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
       <app-section-header

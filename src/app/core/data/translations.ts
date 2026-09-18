@@ -8,6 +8,7 @@ export const translations = {
     nav: {
       home: 'Home',
       services: 'Services',
+      pricing: 'Pricing',
       caseStudies: 'Case Study',
       about: 'Outcomes',
       contact: 'Contact'
@@ -126,7 +127,46 @@ export const translations = {
           }
         ]
       },
-      outcomes: {
+      pricing: {
+        eyebrow: 'Clear starting points',
+        title: 'Automation that fits your workflow',
+        subtitle: 'Start with one focused process, then scale when the workflow proves its value. Every project is scoped around your tools, data and requirements.',
+        note: 'Starting prices only. Final scope depends on integrations, edge cases and deployment requirements.',
+        plans: [
+          {
+            name: 'Automation Starter',
+            price: 'From €500',
+            description: 'For one focused process with a clear, measurable outcome.',
+            cta: 'Get Started',
+            featured: '',
+            priceNote: '',
+            features: ['1 production workflow', '1–2 tool integrations', 'Email or PDF processing', 'AI data extraction', 'Excel or Google Sheets output', 'Testing, deployment and handover']
+          },
+          {
+            name: 'Custom Automation',
+            price: 'From €1,200',
+            description: 'For complex workflows that connect multiple systems and business rules.',
+            cta: 'Discuss Your Workflow',
+            featured: 'Most Popular',
+            priceNote: '',
+            features: ['Multi-step workflow design', 'AI document processing', 'Multiple integrations', 'API and webhook connections', 'ERP or CRM integration', 'Error handling, testing and documentation']
+          },
+          {
+            name: 'Automation Partner',
+            price: 'From €2,000',
+            priceNote: 'initial engagement',
+            description: 'For teams that want ongoing development, monitoring and optimization.',
+            cta: 'Let’s Talk',
+            featured: '',
+            features: ['Multiple workflows', 'Monitoring and maintenance', 'Workflow improvements', 'Priority support', 'New integrations', 'Continuous optimization']
+          }
+        ],
+        support: {
+          label: 'Ongoing support',
+          price: 'From €150/month',
+          text: 'Monitoring, fixes and small workflow improvements after launch.'
+        }
+      },      outcomes: {
         eyebrow: 'Business outcomes',
         title: 'Less administration. More reliable operations.',
         subtitle: 'The system should make your existing process easier to run, not force your team into a new one.',
@@ -234,6 +274,7 @@ export const translations = {
     nav: {
       home: 'Početna',
       services: 'Usluge',
+      pricing: 'Cene',
       caseStudies: 'Primer',
       about: 'Rezultati',
       contact: 'Kontakt'
@@ -324,7 +365,46 @@ export const translations = {
           { title: 'Custom workflow automatizacija', text: 'Povežite CRM, ERP, Google Sheets i API-je uz n8n.', icon: 'workflow' }
         ]
       },
-      outcomes: {
+      pricing: {
+        eyebrow: 'Jasne početne cene',
+        title: 'Automatizacija prilagođena vašem workflow-u',
+        subtitle: 'Krenite od jednog fokusiranog procesa, pa proširite sistem kada se pokaže njegova vrednost. Svaki projekat se prilagođava vašim alatima, podacima i zahtevima.',
+        note: 'Početne cene su okvirne. Konačna cena zavisi od integracija, izuzetaka i zahteva za implementaciju.',
+        plans: [
+          {
+            name: 'Automation Starter',
+            price: 'Od €500',
+            description: 'Za jedan fokusiran proces sa jasnim i merljivim rezultatom.',
+            cta: 'Započnite',
+            featured: '',
+            priceNote: '',
+            features: ['1 produkcioni workflow', '1–2 integracije', 'Email ili PDF obrada', 'AI izvlačenje podataka', 'Excel ili Google Sheets rezultat', 'Testiranje, deployment i predaja']
+          },
+          {
+            name: 'Custom Automation',
+            price: 'Od €1.200',
+            description: 'Za složenije workflow-e koji povezuju više sistema i poslovnih pravila.',
+            cta: 'Razgovarajmo o procesu',
+            featured: 'Najpopularnije',
+            priceNote: '',
+            features: ['Dizajn višekoračnog workflow-a', 'AI obrada dokumenata', 'Više integracija', 'API i webhook konekcije', 'ERP ili CRM integracija', 'Error handling, testiranje i dokumentacija']
+          },
+          {
+            name: 'Automation Partner',
+            price: 'Od €2.000',
+            priceNote: 'početni angažman',
+            description: 'Za timove kojima su potrebni kontinuirani razvoj, monitoring i optimizacija.',
+            cta: 'Hajde da razgovaramo',
+            featured: '',
+            features: ['Više workflow-a', 'Monitoring i održavanje', 'Unapređenje workflow-a', 'Prioritetna podrška', 'Nove integracije', 'Kontinuirana optimizacija']
+          }
+        ],
+        support: {
+          label: 'Kontinuirana podrška',
+          price: 'Od €150/mesečno',
+          text: 'Monitoring, ispravke i manja unapređenja workflow-a nakon puštanja u rad.'
+        }
+      },      outcomes: {
         eyebrow: 'Poslovni rezultati',
         title: 'Manje administracije. Pouzdanije operacije.',
         subtitle: 'Sistem treba da olakša postojeći proces, a ne da vaš tim tera na potpuno novi način rada.',
