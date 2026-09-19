@@ -3,7 +3,7 @@ export const translations = {
     meta: {
       title: 'Nikola Sajić | AI Automation for Businesses',
       description:
-        'AI automation solutions using n8n, Claude and custom integrations. Automate invoices, emails and repetitive business workflows.'
+        'AI-powered invoice and document processing for logistics companies. Move data from email and PDFs into Excel, ERP or your existing systems.'
     },
     nav: {
       home: 'Home',
@@ -35,18 +35,18 @@ export const translations = {
     },
     home: {
       hero: {
-        eyebrow: 'Business workflow automation',
-        title: 'Automate invoice processing and repetitive operations',
+        eyebrow: 'Invoice and document automation for logistics',
+        title: 'Automate invoice processing for your logistics business',
         subtitle:
-          'I build practical AI workflows that read invoices from email, extract the important data and send it to Excel or your ERP — while keeping exceptions visible for your team.',
-        primaryCta: 'Get a Free Workflow Audit',
-        secondaryCta: 'See How It Works',
-        note: 'Best for teams processing recurring PDFs, emails and spreadsheets by hand.',
-        outcomes: ['Invoice processing', 'Email operations', 'Document workflows'],
+          'Stop spending hours moving invoice and document data from email and PDFs into spreadsheets. I build AI workflows that extract the details and send them to Excel, ERP or your existing system.',
+        primaryCta: 'Discuss Your Workflow',
+        secondaryCta: 'See the Process',
+        note: 'Built for logistics, freight forwarding and transport teams handling recurring invoices and documents.',
+        outcomes: ['Invoice processing', 'PDF and email handling', 'Excel / ERP preparation'],
         proof: [
-          { value: '10+', label: 'hours saved weekly' },
-          { value: '2–5', label: 'days to delivery' },
-          { value: 'Free', label: '30-min consultation' }
+          { value: 'Email', label: 'input' },
+          { value: 'AI', label: 'extraction' },
+          { value: 'ERP', label: 'output' }
         ]
       },
       visual: {
@@ -80,7 +80,7 @@ export const translations = {
       howItWorks: {
         eyebrow: 'One practical workflow',
         title: 'How it works',
-        subtitle: 'A typical invoice flow, built to remove manual data entry while keeping exceptions visible.',
+        subtitle: 'See how an emailed invoice becomes structured data ready for the next system.',
         steps: [
           {
             title: 'Receive PDF invoices by email',
@@ -102,8 +102,8 @@ export const translations = {
       },
       services: {
         eyebrow: 'Services',
-        title: 'Automation built around your actual operations.',
-        subtitle: 'Focused systems for the workflows your team repeats every day.',
+        title: 'Start with invoice and document processing.',
+        subtitle: 'Automate the manual work between your inbox, documents, spreadsheets and business systems.',
         items: [
           {
             title: 'AI Invoice Processing',
@@ -111,18 +111,18 @@ export const translations = {
             icon: 'document'
           },
           {
-            title: 'Email Workflow Automation',
-            text: 'Automatically sort, forward, reply and archive emails.',
+            title: 'Email & Document Workflows',
+            text: 'Route incoming emails and documents to the right workflow automatically.',
             icon: 'email'
           },
           {
-            title: 'AI Business Chatbots',
-            text: '24/7 customer support trained on company knowledge.',
+            title: 'ERP & CRM Integrations',
+            text: 'Prepare and sync structured data with the systems your team already uses.',
             icon: 'chatbot'
           },
           {
-            title: 'Custom Workflow Automation',
-            text: 'Connect CRM, ERP, Google Sheets and APIs using n8n.',
+            title: 'Custom Automation',
+            text: 'Connect multiple tools, APIs and business rules around one process.',
             icon: 'workflow'
           }
         ]
@@ -166,33 +166,34 @@ export const translations = {
           price: 'From €150/month',
           text: 'Monitoring, fixes and small workflow improvements after launch.'
         }
-      },      outcomes: {
+      },
+      outcomes: {
         eyebrow: 'Business outcomes',
-        title: 'Less administration. More reliable operations.',
-        subtitle: 'The system should make your existing process easier to run, not force your team into a new one.',
+        title: 'The business results that matter.',
+        subtitle: 'Less manual entry, faster processing and cleaner data for the systems your team already uses.',
         items: [
           {
-            title: 'Reduce manual work',
-            text: 'Remove repetitive copying, filing and handoffs from everyday operations.'
+            title: 'Less manual data entry',
+            text: 'Stop copying invoice and document details between email, PDFs and spreadsheets.'
           },
           {
-            title: 'Fewer human errors',
-            text: 'Apply the same extraction and routing rules every time a document arrives.'
+            title: 'Fewer data-entry errors',
+            text: 'Use consistent extraction and validation rules for every document.'
           },
           {
-            title: 'Faster document processing',
-            text: 'Move PDFs and emails into the right system while the team focuses on exceptions.'
+            title: 'Faster invoice processing',
+            text: 'Get key fields into the next step while your team handles only exceptions.'
           },
           {
-            title: 'Works with existing systems',
-            text: 'Connect the inboxes, spreadsheets, CRMs and internal tools your business already relies on.'
+            title: 'Data ready for ERP or Excel',
+            text: 'Keep the tools you use and connect them with a workflow built around your process.'
           }
         ]
       },
       cases: {
         eyebrow: 'Case study',
         title: 'A workflow that removes weekly admin',
-        subtitle: 'A practical invoice process where AI handles repeatable extraction and people handle the exceptions.',
+        subtitle: 'A clear example of how logistics teams can move invoice data from inbox to structured output.',
         problem: 'Problem',
         solution: 'Solution',
         result: 'Result',
@@ -202,40 +203,40 @@ export const translations = {
       },
       faq: {
         eyebrow: 'FAQ',
-        title: 'Questions before we build',
-        subtitle: 'Clear answers before your team changes a process.',
+        title: 'Questions before we automate',
+        subtitle: 'The essentials before we connect a workflow to your business.',
         items: [
           {
-            question: 'How long does implementation take?',
-            answer: 'A focused workflow is usually delivered in 2–5 business days. Larger systems are scoped in clear phases before work starts.'
+            question: 'What can be automated?',
+            answer: 'Common starting points include invoice PDFs, email attachments, document classification, data extraction and Excel or ERP preparation.'
           },
           {
-            question: 'Do I need to change my current software?',
-            answer: 'Usually not. The aim is to connect the tools you already use, then add only what the workflow genuinely needs.'
+            question: 'What systems can you integrate?',
+            answer: 'Email, Excel, Google Sheets, ERP, CRM, APIs and webhooks can be connected when they fit the workflow.'
           },
           {
-            question: 'Can it work with Excel?',
-            answer: 'Yes. Excel and Google Sheets are common destinations for extracted data, reports and workflow updates.'
+            question: 'How does implementation work?',
+            answer: 'We map one process, define the rules and exceptions, build the workflow, test it and deploy it into your existing setup.'
           },
           {
-            question: 'Is my data secure?',
-            answer: 'Each workflow is designed around the data involved. Access is limited to what is required, and sensitive steps can stay behind a review point.'
+            question: 'How much does it cost?',
+            answer: 'Projects start from €500 for a focused workflow. The final price depends on integrations, complexity and edge cases.'
           },
           {
-            question: 'Do you provide maintenance?',
-            answer: 'Yes. I can support, monitor and improve a workflow after launch when the process or connected tools change.'
+            question: 'Do I need to replace my existing software?',
+            answer: 'Usually not. The goal is to connect the tools your team already relies on and improve the process around them.'
           }
         ]
       },
       contact: {
-        title: 'Get a free workflow audit',
-        text: "Tell me about one repetitive process. I'll identify what can be automated and show you a practical next step.",
+        title: 'Discuss your workflow',
+        text: "Tell me where invoice or document data is still entered manually. I will suggest a practical first automation step.",
         trust: [
           { title: 'Free 30-Min Consultation', icon: 'clock' },
           { title: 'Delivery in 2-5 Business Days', icon: 'check' },
           { title: 'Custom AI Workflow Solutions', icon: 'wrench' }
         ],
-        technology: 'Built with n8n, Claude and custom integrations where they fit the workflow.',
+        technology: 'Built around your existing tools, with AI used where it makes the process faster and more reliable.',
         form: {
           name: 'Name',
           email: 'Work email',
@@ -247,7 +248,7 @@ export const translations = {
           messagePlaceholder: 'For example: invoices arrive by email and are entered into Excel manually.',
           submit: 'Start the conversation',
           subject: 'Automation consultation request',
-          hint: 'No obligation. I will reply with practical automation ideas for your process.',
+          hint: 'No obligation. I will reply with one practical automation opportunity for your workflow.',
           sending: 'Sending your message…',
           sendingHint: 'Please wait while I send your request to Formspree.',
           success: 'Message sent successfully.',
@@ -269,7 +270,7 @@ export const translations = {
     meta: {
       title: 'Nikola Sajić | AI automatizacija za biznise',
       description:
-        'AI automatizacije uz n8n, Claude i custom integracije. Automatizujte fakture, emailove i ponavljajuće poslovne procese.'
+        'AI obrada faktura i dokumentacije za logističke firme. Prebacite podatke iz emailova i PDF-ova u Excel, ERP ili postojeći poslovni sistem.'
     },
     nav: {
       home: 'Početna',
@@ -301,18 +302,18 @@ export const translations = {
     },
     home: {
       hero: {
-        eyebrow: 'Automatizacija poslovnih procesa',
-        title: 'Automatizujte obradu faktura i repetitivne procese',
+        eyebrow: 'Obrada faktura i dokumentacije u logistici',
+        title: 'Automatizujte obradu faktura u logističkoj firmi',
         subtitle:
-          'Gradim praktične AI workflow-e koji čitaju fakture iz emaila, izvlače važne podatke i šalju ih u Excel ili ERP — dok izuzeci ostaju vidljivi vašem timu.',
-        primaryCta: 'Zatražite besplatan audit workflow-a',
-        secondaryCta: 'Pogledajte kako funkcioniše',
-        note: 'Najkorisnije za timove koji ručno obrađuju PDF-ove, emailove i tabele.',
-        outcomes: ['Obrada faktura', 'Email operacije', 'Workflow za dokumenta'],
+          'Prekinite sa ručnim prepisivanjem podataka iz emailova, PDF faktura i dokumentacije. Povezujem AI obradu sa Excelom, ERP-om ili sistemima koje već koristite.',
+        primaryCta: 'Razgovarajmo o vašem procesu',
+        secondaryCta: 'Pogledajte proces',
+        note: 'Za logističke, špediterske i transportne firme koje ručno obrađuju fakture i dokumentaciju.',
+        outcomes: ['Obrada faktura', 'Emailovi i PDF dokumenta', 'Priprema za Excel / ERP'],
         proof: [
-          { value: '10+', label: 'sati uštede nedeljno' },
-          { value: '2–5', label: 'dana do isporuke' },
-          { value: 'Besplatno', label: '30-min konsultacije' }
+          { value: 'Email', label: 'ulaz' },
+          { value: 'AI', label: 'obrada' },
+          { value: 'ERP', label: 'rezultat' }
         ]
       },
       visual: {
@@ -346,7 +347,7 @@ export const translations = {
       howItWorks: {
         eyebrow: 'Jedan praktičan workflow',
         title: 'Kako funkcioniše',
-        subtitle: 'Tipičan tok faktura koji uklanja ručni unos, dok izuzeci ostaju vidljivi.',
+        subtitle: 'Pogledajte kako faktura iz inboxa postaje strukturirani podatak spreman za sledeći sistem.',
         steps: [
           { title: 'PDF fakture stižu emailom', text: 'Nova faktura stiže u inbox koji vaš tim već koristi.' },
           { title: 'AI izvlači važne podatke', text: 'Dobavljač, datum, iznos i stavke se čitaju iz dokumenta.' },
@@ -356,18 +357,18 @@ export const translations = {
       },
       services: {
         eyebrow: 'Usluge',
-        title: 'Automatizacija za vaše stvarne operacije.',
-        subtitle: 'Fokusirani sistemi za procese koje vaš tim ponavlja svakog dana.',
+        title: 'Krenite od obrade faktura i dokumentacije.',
+        subtitle: 'Automatizujte ručni rad između inboxa, dokumenata, tabela i poslovnih sistema.',
         items: [
           { title: 'AI obrada faktura', text: 'Izvucite podatke iz PDF-ova i automatski ih upišite u Excel ili ERP.', icon: 'document' },
-          { title: 'Automatizacija email workflow-a', text: 'Automatski sortirajte, prosleđujte, odgovarajte i arhivirajte emailove.', icon: 'email' },
-          { title: 'AI poslovni chatbotovi', text: 'Korisnička podrška 24/7 obučena na znanju vaše kompanije.', icon: 'chatbot' },
-          { title: 'Custom workflow automatizacija', text: 'Povežite CRM, ERP, Google Sheets i API-je uz n8n.', icon: 'workflow' }
+          { title: 'Email i dokumentacija', text: 'Usmerite emailove i dokumenta u pravi workflow bez ručnog prosleđivanja.', icon: 'email' },
+          { title: 'ERP i CRM integracije', text: 'Pripremite i sinhronizujte strukturirane podatke sa sistemima koje već koristite.', icon: 'chatbot' },
+          { title: 'Custom automatizacija', text: 'Povežite više alata, API-ja i poslovnih pravila oko jednog procesa.', icon: 'workflow' }
         ]
       },
       pricing: {
         eyebrow: 'Jasne početne cene',
-        title: 'Automatizacija prilagođena vašem workflow-u',
+        title: 'Automatizacija prilagođena vašem procesu',
         subtitle: 'Krenite od jednog fokusiranog procesa, pa proširite sistem kada se pokaže njegova vrednost. Svaki projekat se prilagođava vašim alatima, podacima i zahtevima.',
         note: 'Početne cene su okvirne. Konačna cena zavisi od integracija, izuzetaka i zahteva za implementaciju.',
         plans: [
@@ -378,7 +379,7 @@ export const translations = {
             cta: 'Započnite',
             featured: '',
             priceNote: '',
-            features: ['1 produkcioni workflow', '1–2 integracije', 'Email ili PDF obrada', 'AI izvlačenje podataka', 'Excel ili Google Sheets rezultat', 'Testiranje, deployment i predaja']
+            features: ['1 produkcioni workflow', '1–2 integracije', 'Email ili PDF obrada', 'AI izvlačenje podataka', 'Excel ili Google Sheets rezultat', 'Testiranje, puštanje u rad i predaja']
           },
           {
             name: 'Custom Automation',
@@ -387,7 +388,7 @@ export const translations = {
             cta: 'Razgovarajmo o procesu',
             featured: 'Najpopularnije',
             priceNote: '',
-            features: ['Dizajn višekoračnog workflow-a', 'AI obrada dokumenata', 'Više integracija', 'API i webhook konekcije', 'ERP ili CRM integracija', 'Error handling, testiranje i dokumentacija']
+            features: ['Dizajn višekoračnog workflow-a', 'AI obrada dokumenata', 'Više integracija', 'API i webhook konekcije', 'ERP ili CRM integracija', 'Obrada grešaka, testiranje i dokumentacija']
           },
           {
             name: 'Automation Partner',
@@ -404,21 +405,22 @@ export const translations = {
           price: 'Od €150/mesečno',
           text: 'Monitoring, ispravke i manja unapređenja workflow-a nakon puštanja u rad.'
         }
-      },      outcomes: {
+      },
+      outcomes: {
         eyebrow: 'Poslovni rezultati',
-        title: 'Manje administracije. Pouzdanije operacije.',
-        subtitle: 'Sistem treba da olakša postojeći proces, a ne da vaš tim tera na potpuno novi način rada.',
+        title: 'Rezultati koji su važni za poslovanje.',
+        subtitle: 'Manje ručnog unosa, brža obrada i uredniji podaci u sistemima koje već koristite.',
         items: [
-          { title: 'Manje ručnog rada', text: 'Uklonite ponavljajuće prepisivanje, arhiviranje i predaje iz svakodnevnog posla.' },
-          { title: 'Manje ljudskih grešaka', text: 'Ista pravila za izvlačenje i rutiranje primenjuju se svaki put kada stigne dokument.' },
-          { title: 'Brža obrada dokumenata', text: 'PDF-ovi i emailovi stižu do pravog sistema dok se tim bavi izuzecima.' },
-          { title: 'Radi sa postojećim sistemima', text: 'Povežite inboxe, tabele, CRM-ove i interne alate na koje se već oslanjate.' }
+          { title: 'Manje ručnog unosa', text: 'Prestanite da prepisujete podatke iz faktura i dokumenata između emaila, PDF-ova i tabela.' },
+          { title: 'Manje grešaka pri unosu', text: 'Ista pravila za izvlačenje i proveru primenjuju se na svaki dokument.' },
+          { title: 'Brža obrada faktura', text: 'Važna polja stižu u sledeći sistem, a tim se bavi samo izuzecima.' },
+          { title: 'Podaci spremni za ERP ili Excel', text: 'Zadržite alate koje koristite i povežite ih workflow-om prilagođenim vašem procesu.' }
         ]
       },
       cases: {
         eyebrow: 'Primer iz prakse',
         title: 'Workflow koji uklanja nedeljnu administraciju',
-        subtitle: 'Praktičan proces za fakture gde AI radi ponavljajuće izvlačenje, a ljudi obrađuju izuzetke.',
+        subtitle: 'Jasan primer kako logistički tim može da prebaci podatke sa fakture iz inboxa u strukturirani rezultat.',
         problem: 'Problem',
         solution: 'Rešenje',
         result: 'Rezultat',
@@ -428,31 +430,31 @@ export const translations = {
       },
       faq: {
         eyebrow: 'FAQ',
-        title: 'Pitanja pre početka',
-        subtitle: 'Jasni odgovori pre nego što vaš tim promeni proces.',
+        title: 'Pitanja pre automatizacije',
+        subtitle: 'Najvažnije informacije pre nego što povežemo workflow sa vašim poslovanjem.',
         items: [
-          { question: 'Koliko traje implementacija?', answer: 'Fokusirani workflow se obično isporučuje za 2–5 radnih dana. Veći sistemi se pre početka dele na jasne faze.' },
-          { question: 'Da li moram da menjam postojeći softver?', answer: 'Uglavnom ne. Cilj je da se povežu alati koje već koristite i doda samo ono što je workflow-u zaista potrebno.' },
-          { question: 'Može li da radi sa Excelom?', answer: 'Da. Excel i Google Sheets su česta odredišta za izvučene podatke, izveštaje i workflow izmene.' },
-          { question: 'Da li su moji podaci bezbedni?', answer: 'Svaki workflow se dizajnira prema podacima koje obrađuje. Pristup je ograničen na neophodno, a osetljivi koraci mogu imati ručnu proveru.' },
-          { question: 'Da li pružate održavanje?', answer: 'Da. Mogu da podržavam, pratim i unapređujem workflow nakon pokretanja kada se proces ili povezani alati promene.' }
+          { question: 'Šta može da se automatizuje?', answer: 'Dobar početak su PDF fakture, email prilozi, razvrstavanje dokumenata, izvlačenje podataka i priprema za Excel ili ERP.' },
+          { question: 'Sa kojim sistemima možeš da radiš?', answer: 'Email, Excel, Google Sheets, ERP, CRM, API-ji i webhook konekcije mogu da se povežu kada to ima smisla za workflow.' },
+          { question: 'Kako izgleda implementacija?', answer: 'Mapiramo jedan proces, definišemo pravila i izuzetke, izgradimo workflow, testiramo ga i pustimo u rad u vašem postojećem okruženju.' },
+          { question: 'Koliko košta?', answer: 'Projekti počinju od €500 za fokusirani workflow. Konačna cena zavisi od integracija, složenosti i izuzetaka.' },
+          { question: 'Da li moramo da menjamo postojeći softver?', answer: 'Uglavnom ne. Cilj je da povežemo alate na koje se vaš tim već oslanja i unapredimo proces oko njih.' }
         ]
       },
       contact: {
-        title: 'Zatražite besplatan audit workflow-a',
-        text: 'Opišite jedan repetitivan proces. Pokazaću šta može da se automatizuje i koji bi bio praktičan sledeći korak.',
+        title: 'Razgovarajmo o vašem procesu',
+        text: 'Recite gde se podaci sa faktura ili dokumenata još uvek unose ručno. Predložiću jedan praktičan prvi korak.',
         trust: [
           { title: 'Besplatne konsultacije od 30 minuta', icon: 'clock' },
           { title: 'Isporuka za 2-5 radnih dana', icon: 'check' },
-          { title: 'Custom AI workflow rešenja', icon: 'wrench' }
+          { title: 'Prilagođena AI rešenja za procese', icon: 'wrench' }
         ],
-        technology: 'Gradim uz n8n, Claude i custom integracije tamo gde odgovaraju workflow-u.',
+        technology: 'Povezujem alate koje već koristite i uvodim AI tamo gde proces postaje brži i pouzdaniji.',
         form: {
           name: 'Ime', email: 'Poslovni email', company: 'Kompanija', message: 'Šta želite da automatizujete?',
           namePlaceholder: 'Vaše ime', emailPlaceholder: 'vi@kompanija.com', companyPlaceholder: 'Ime kompanije',
           messagePlaceholder: 'Na primer: fakture stižu emailom i ručno se unose u Excel.',
           submit: 'Započni razgovor', subject: 'Zahtev za konsultacije o automatizaciji',
-          hint: 'Bez obaveze. Dobićete praktične ideje za automatizaciju vašeg procesa.',
+          hint: 'Bez obaveze. Odgovoriću jednom konkretnom idejom za unapređenje vašeg procesa.',
           sending: 'Šaljem poruku…',
           sendingHint: 'Sačekaj trenutak dok šaljem upit preko Formspree servisa.',
           success: 'Poruka je uspešno poslata.',

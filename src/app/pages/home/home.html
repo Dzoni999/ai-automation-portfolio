@@ -26,15 +26,8 @@
             </div>
           }
         </div>
-        <div class="mt-8 grid gap-3 border-l border-slate-900/10 pl-4 dark:border-white/10">
-          <p class="max-w-xl text-sm leading-6 text-slate-500 dark:text-zinc-500">{{ copy().home.hero.note }}</p>
-          <div class="flex flex-wrap gap-2 text-xs font-semibold text-slate-600 dark:text-zinc-400">
-            @for (outcome of copy().home.hero.outcomes; track outcome) {
-              <span class="rounded-md border border-slate-900/10 bg-white px-2.5 py-1 dark:border-white/10 dark:bg-white/5">{{ outcome }}</span>
-            }
-          </div>
-        </div>
       </div>
+
 
       <div class="pb-10 lg:pb-0" appReveal [appRevealDelay]="140">
         <app-hero-automation-visual [visual]="copy().home.visual" />
