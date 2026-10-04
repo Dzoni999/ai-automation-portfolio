@@ -1,9 +1,9 @@
 export const translations = {
   en: {
     meta: {
-      title: 'Nikola Sajić | AI Automation for Businesses',
+      title: 'SAJIC AUTOMATIONS | AI Automation for Logistics',
       description:
-        'AI-powered invoice and document processing for logistics companies. Move data from email and PDFs into Excel, ERP or your existing systems.'
+        'SAJIC AUTOMATIONS builds AI-powered invoice and document workflows for logistics companies. Move data from email and PDFs into Excel, ERP or your existing systems.'
     },
     nav: {
       home: 'Home',
@@ -268,9 +268,9 @@ export const translations = {
   },
   sr: {
     meta: {
-      title: 'Nikola Sajić | AI automatizacija za biznise',
+      title: 'SAJIC AUTOMATIONS | AI automatizacija za logistiku',
       description:
-        'AI obrada faktura i dokumentacije za logističke firme. Prebacite podatke iz emailova i PDF-ova u Excel, ERP ili postojeći poslovni sistem.'
+        'SAJIC AUTOMATIONS razvija AI workflow-e za obradu faktura i dokumentacije u logističkim firmama. Podaci iz emailova i PDF-ova stižu u Excel, ERP ili postojeći poslovni sistem.'
     },
     nav: {
       home: 'Početna',

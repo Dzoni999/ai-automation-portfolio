@@ -27,7 +27,7 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:title', content: data.title });
     this.meta.updateTag({ property: 'og:description', content: data.description });
     this.meta.updateTag({ property: 'og:type', content: 'website' });
-    this.meta.updateTag({ property: 'og:site_name', content: 'Nikola Sajic' });
+    this.meta.updateTag({ property: 'og:site_name', content: 'SAJIC AUTOMATIONS' });
     this.meta.updateTag({ property: 'og:url', content: pageUrl });
     this.meta.updateTag({ property: 'og:image', content: imageUrl });
     this.meta.updateTag({ property: 'og:image:alt', content: data.title });
@@ -69,6 +69,11 @@ export class SeoService {
       '@context': 'https://schema.org',
       '@type': 'Person',
       name: 'Nikola Sajić',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'SAJIC AUTOMATIONS',
+        url
+      },
       url,
       jobTitle: 'AI Workflow Automation Consultant',
       email: 'mailto:nikolasajic7@gmail.com',
