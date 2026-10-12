@@ -137,7 +137,7 @@ export const translations = {
             name: 'Automation Starter',
             price: 'From €500',
             description: 'For one focused process with a clear, measurable outcome.',
-            cta: 'Get Started',
+            cta: 'Start a Project',
             featured: '',
             priceNote: '',
             features: ['1 production workflow', '1–2 tool integrations', 'Email or PDF processing', 'AI data extraction', 'Excel or Google Sheets output', 'Testing, deployment and handover']
@@ -156,7 +156,7 @@ export const translations = {
             price: 'From €2,000',
             priceNote: 'initial engagement',
             description: 'For teams that want ongoing development, monitoring and optimization.',
-            cta: 'Let’s Talk',
+            cta: 'Plan Ongoing Support',
             featured: '',
             features: ['Multiple workflows', 'Monitoring and maintenance', 'Workflow improvements', 'Priority support', 'New integrations', 'Continuous optimization']
           }
@@ -376,7 +376,7 @@ export const translations = {
             name: 'Automation Starter',
             price: 'Od €500',
             description: 'Za jedan fokusiran proces sa jasnim i merljivim rezultatom.',
-            cta: 'Započnite',
+            cta: 'Započnite projekat',
             featured: '',
             priceNote: '',
             features: ['1 produkcioni workflow', '1–2 integracije', 'Email ili PDF obrada', 'AI izvlačenje podataka', 'Excel ili Google Sheets rezultat', 'Testiranje, puštanje u rad i predaja']
@@ -395,7 +395,7 @@ export const translations = {
             price: 'Od €2.000',
             priceNote: 'početni angažman',
             description: 'Za timove kojima su potrebni kontinuirani razvoj, monitoring i optimizacija.',
-            cta: 'Hajde da razgovaramo',
+            cta: 'Dogovorimo podršku',
             featured: '',
             features: ['Više workflow-a', 'Monitoring i održavanje', 'Unapređenje workflow-a', 'Prioritetna podrška', 'Nove integracije', 'Kontinuirana optimizacija']
           }
