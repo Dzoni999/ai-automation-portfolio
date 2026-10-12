@@ -1,9 +1,9 @@
 export const translations = {
   en: {
     meta: {
-      title: 'SAJIC AUTOMATIONS | AI Automation for Logistics',
+      title: 'Sajic Automations | AI Automation for Logistics',
       description:
-        'SAJIC AUTOMATIONS builds AI-powered invoice and document workflows for logistics companies. Move data from email and PDFs into Excel, ERP or your existing systems.'
+        'AI automation for logistics: process PDF invoices and emails, extract data, and send it to Excel, ERP or existing systems.'
     },
     nav: {
       home: 'Home',
@@ -268,9 +268,9 @@ export const translations = {
   },
   sr: {
     meta: {
-      title: 'SAJIC AUTOMATIONS | AI automatizacija za logistiku',
+      title: 'Sajic Automations | AI automatizacija za logistiku',
       description:
-        'SAJIC AUTOMATIONS razvija AI workflow-e za obradu faktura i dokumentacije u logističkim firmama. Podaci iz emailova i PDF-ova stižu u Excel, ERP ili postojeći poslovni sistem.'
+        'AI automatizacija logistike: obrada PDF faktura i emailova, ekstrakcija podataka i slanje u Excel, ERP ili postojeći sistem.'
     },
     nav: {
       home: 'Početna',
