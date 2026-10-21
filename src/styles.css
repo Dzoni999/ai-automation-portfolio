@@ -119,6 +119,22 @@ button:focus-visible {
 .hero-actions { animation-delay: 370ms; }
 .hero-proof { animation-delay: 520ms; }
 
+.brand-lockup { animation: brand-lockup-in 900ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+.brand-mark { animation: brand-mark-pulse 1100ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+.brand-name { position: relative; isolation: isolate; overflow: hidden; }
+.brand-name::after { position: absolute; z-index: 1; top: -30%; left: -35%; width: 24%; height: 160%; transform: translateX(-180%) skewX(-18deg); background: linear-gradient(90deg, transparent, rgba(147, 197, 253, 0.8), transparent); content: ""; pointer-events: none; animation: brand-name-glint 1100ms 240ms ease-out both; }
+
+.hero-workflow .workflow-node { opacity: 0; animation: workflow-node-in 680ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+.hero-workflow .workflow-node-1 { animation-delay: 520ms; }
+.hero-workflow .workflow-node-2 { animation-delay: 680ms; }
+.hero-workflow .workflow-node-3 { animation-delay: 840ms; }
+.hero-workflow .workflow-node-4 { animation-delay: 1000ms; }
+.hero-workflow .workflow-node-5 { animation-name: workflow-node-five-in; animation-delay: 1160ms; }
+.hero-workflow .hero-flow-line { opacity: 0; transform-origin: left center; animation: workflow-line-in 520ms ease-out both; }
+.hero-workflow .hero-flow-line:nth-child(1) { animation-delay: 760ms; }
+.hero-workflow .hero-flow-line:nth-child(2) { animation-delay: 920ms; }
+.hero-workflow .hero-flow-line:nth-child(3) { animation-delay: 1080ms; }
+
 .service-card-shell { transform-style: preserve-3d; will-change: transform, box-shadow; }
 .service-card-shell:hover { transform: translateY(-9px) rotateX(2deg) rotateY(-2deg); box-shadow: 0 20px 45px rgba(37, 99, 235, 0.14); }
 .service-card-shell:nth-child(even):hover { transform: translateY(-9px) rotateX(2deg) rotateY(2deg); }
@@ -190,6 +206,12 @@ button:focus-visible {
 
 @keyframes hero-copy-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes hero-glow-drift { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.75; } 50% { transform: translate3d(18px, -12px, 0) scale(1.08); opacity: 1; } }
+@keyframes brand-lockup-in { from { opacity: 0; transform: translate3d(-10px, 0, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+@keyframes brand-mark-pulse { 0% { filter: brightness(0.72) saturate(0.8); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); } 45% { filter: brightness(1.16) saturate(1.15); box-shadow: 0 0 0 7px rgba(37, 99, 235, 0.12), 0 0 26px rgba(37, 99, 235, 0.42); } 100% { filter: brightness(1) saturate(1); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); } }
+@keyframes brand-name-glint { 0% { transform: translateX(-180%) skewX(-18deg); opacity: 0; } 20% { opacity: 1; } 100% { transform: translateX(620%) skewX(-18deg); opacity: 0; } }
+@keyframes workflow-node-in { from { opacity: 0; transform: translate3d(0, 12px, 0) scale(0.96); } to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); } }
+@keyframes workflow-node-five-in { from { opacity: 0; transform: translate3d(-50%, 12px, 0) scale(0.96); } to { opacity: 1; transform: translate3d(-50%, 0, 0) scale(1); } }
+@keyframes workflow-line-in { from { opacity: 0; transform: scaleX(0); } to { opacity: 1; transform: scaleX(1); } }
 
 @media (max-width: 767px) {
   .workflow-track { display: grid; gap: 0; }
@@ -357,5 +379,10 @@ button:focus-visible {
   .hero-proof { opacity: 1; animation: none; }
   .hero-section::before,
   .hero-section::after { animation: none; }
+  .brand-lockup,
+  .brand-mark,
+  .brand-name::after { animation: none; }
+  .hero-workflow .workflow-node,
+  .hero-workflow .hero-flow-line { opacity: 1; animation: none; }
   .workflow-step { opacity: 1; transform: none; }
 }
