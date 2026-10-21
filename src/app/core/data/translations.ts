@@ -237,6 +237,10 @@ export const translations = {
           { title: 'Custom AI Workflow Solutions', icon: 'wrench' }
         ],
         technology: 'Built around your existing tools, with AI used where it makes the process faster and more reliable.',
+        booking: {
+          label: 'Book a 30-minute discovery call',
+          text: 'Prefer to talk it through? Choose a time that works for you.',
+        },
         form: {
           name: 'Name',
           email: 'Work email',
@@ -449,6 +453,10 @@ export const translations = {
           { title: 'Prilagođena AI rešenja za procese', icon: 'wrench' }
         ],
         technology: 'Povezujem alate koje već koristite i uvodim AI tamo gde proces postaje brži i pouzdaniji.',
+        booking: {
+          label: 'Zakažite 30-minutni razgovor',
+          text: 'Više volite direktan razgovor? Izaberite termin koji vam odgovara.',
+        },
         form: {
           name: 'Ime', email: 'Poslovni email', company: 'Kompanija', message: 'Šta želite da automatizujete?',
           namePlaceholder: 'Vaše ime', emailPlaceholder: 'vi@kompanija.com', companyPlaceholder: 'Ime kompanije',

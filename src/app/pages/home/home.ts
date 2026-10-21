@@ -107,6 +107,7 @@ export class Home {
           email,
           company,
           message,
+          _gotcha: String(data.get('_gotcha') || ''),
           _replyto: email,
           _subject: contact.form.subject
         })
