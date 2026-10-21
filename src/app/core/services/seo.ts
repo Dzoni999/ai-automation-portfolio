@@ -9,6 +9,7 @@ type SeoData = {
 
 @Injectable({ providedIn: 'root' })
 export class SeoService {
+  private readonly siteOrigin = 'https://sajicautomations.com';
   private readonly document = inject(DOCUMENT);
   private readonly title = inject(Title);
   private readonly meta = inject(Meta);
@@ -43,7 +44,7 @@ export class SeoService {
 
   private currentPageUrl(): string {
     const location = this.document.location;
-    return `${location.origin}${location.pathname}`;
+    return new URL(location.pathname || '/', this.siteOrigin).toString();
   }
 
   private upsertCanonical(url: string): void {
